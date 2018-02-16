@@ -26,5 +26,10 @@ pipeline {
                 sh './jenkins/scripts/deliver.sh'
             }
         }
+        stage('DockerBuild') {
+            steps {
+                sh './jenkins/scripts/docker-build.sh'
+            }
+        }
     }
 }
